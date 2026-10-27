@@ -1,3 +1,135 @@
 <resources>
-    <string name="app_name">MyAssignment</string>
+    <string name="app_name">Smart Pantry</string>
+
+    <!-- Navigation and screen titles -->
+    <string name="nav_pantry">Pantry</string>
+    <string name="nav_recipes">Recipes</string>
+    <string name="nav_settings">Settings</string>
+    <string name="title_pantry">My pantry</string>
+    <string name="title_recipes">Recipes</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_add_item">Add ingredient</string>
+    <string name="title_edit_item">Edit ingredient</string>
+
+    <!-- Common actions -->
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="undo">Undo</string>
+    <string name="clear">Clear</string>
+    <string name="save">Save</string>
+
+    <!-- Pantry list -->
+    <string name="pantry_empty">Your pantry is empty.\nTap “Add ingredient” to record what you have at home.</string>
+    <string name="add_ingredient">Add ingredient</string>
+    <string name="delete_item_description">Delete %1$s</string>
+    <string name="expiry_none">No expiry date</string>
+    <string name="expiry_today">Expires today</string>
+    <string name="expiry_tomorrow">Expires tomorrow</string>
+    <string name="expiry_in_days">Expires in %1$d days (%2$s)</string>
+    <plurals name="expiry_expired">
+        <item quantity="one">Expired %1$d day ago</item>
+        <item quantity="other">Expired %1$d days ago</item>
+    </plurals>
+    <plurals name="expiry_banner">
+        <item quantity="one">%1$d item is expired or expires within %2$d days. Use it first!</item>
+        <item quantity="other">%1$d items are expired or expire within %2$d days. Use them first!</item>
+    </plurals>
+    <string name="delete_confirm_title">Delete %1$s?</string>
+    <string name="delete_confirm_message">This removes it from your pantry.</string>
+    <string name="item_deleted">%1$s deleted</string>
+
+    <!-- Add / edit form -->
+    <string name="field_name">Ingredient name</string>
+    <string name="field_name_helper">For example: Eggs, Milk, Maize meal</string>
+    <string name="field_quantity">Quantity</string>
+    <string name="field_unit">Unit</string>
+    <string name="field_expiry">Expiry date (optional)</string>
+    <string name="expiry_not_set">Not set</string>
+    <string name="choose_date">Choose date</string>
+    <string name="delete_item">Delete ingredient</string>
+    <string name="item_added">%1$s added to your pantry</string>
+    <string name="item_updated">%1$s updated</string>
+    <string name="item_not_found">That ingredient no longer exists.</string>
+    <string name="error_name_required">Enter an ingredient name</string>
+    <string name="error_name_too_long">Keep the name under %1$d characters</string>
+    <string name="error_name_letters">The name must contain letters</string>
+    <string name="error_name_duplicate">You already have “%1$s”. Edit that item instead.</string>
+    <string name="error_quantity_required">Enter a quantity</string>
+    <string name="error_quantity_number">Enter a number, e.g. 2 or 1.5</string>
+    <string name="error_quantity_positive">Quantity must be more than 0</string>
+    <string name="error_quantity_too_large">That quantity is too large</string>
+    <!-- Must stay in the same order as UnitConverter.SUPPORTED_UNITS. -->
+    <string-array name="unit_labels">
+        <item>g (grams)</item>
+        <item>kg (kilograms)</item>
+        <item>ml (millilitres)</item>
+        <item>l (litres)</item>
+        <item>tsp (teaspoons)</item>
+        <item>tbsp (tablespoons)</item>
+        <item>cup (250 ml)</item>
+        <item>pieces</item>
+        <item>slices</item>
+    </string-array>
+
+    <!-- Recipes list -->
+    <string name="mode_suggested">Suggested</string>
+    <string name="mode_all">All recipes</string>
+    <string name="recipes_subtitle">%1$d of %2$d recipes ready to cook</string>
+    <string name="section_ready">Ready to cook (%1$d)</string>
+    <string name="section_almost_there">Almost there: missing 1 ingredient (%1$d)</string>
+    <string name="section_all">All recipes (%1$d)</string>
+    <string name="no_matches">No recipes match your pantry yet. Add more ingredients.</string>
+    <string name="no_matches_empty_pantry">Your pantry is empty. Add ingredients to get recipe suggestions.</string>
+    <string name="status_ready">✓ You have everything</string>
+    <string name="status_missing">Missing: %1$s</string>
+    <plurals name="recipe_meta">
+        <item quantity="one">%1$d ingredient · %2$d min</item>
+        <item quantity="other">%1$d ingredients · %2$d min</item>
+    </plurals>
+
+    <!-- Recipe detail -->
+    <string name="recipe_not_found">That recipe could not be found.</string>
+    <string name="detail_ingredients">Ingredients</string>
+    <string name="detail_method">Method</string>
+    <string name="detail_ready">You have everything for this recipe.</string>
+    <plurals name="detail_missing">
+        <item quantity="one">You are missing %1$d ingredient.</item>
+        <item quantity="other">You are missing %1$d ingredients.</item>
+    </plurals>
+    <string name="ingredient_line">%1$s %2$s</string>
+    <string name="ingredient_have">In your pantry</string>
+    <string name="ingredient_not_enough">Not enough: you have %1$s</string>
+    <string name="ingredient_incompatible">In your pantry, but in a unit that can’t be compared</string>
+    <string name="ingredient_missing">Not in your pantry</string>
+    <string name="cook_button">Cook this recipe</string>
+    <string name="cook_button_disabled">Missing ingredients</string>
+    <string name="cook_confirm_title">Cook %1$s?</string>
+    <string name="cook_confirm">Cook it</string>
+    <string name="cook_line">%1$s: %2$s → %3$s</string>
+    <string name="cook_line_used_up">%1$s: used up (removed)</string>
+    <string name="cook_done">Enjoy your meal! Your pantry has been updated.</string>
+
+    <!-- Settings -->
+    <string name="settings_section_alerts">Expiry alerts</string>
+    <string name="settings_expiry_alerts">Highlight expiring items</string>
+    <string name="settings_expiry_alerts_summary">Shows a banner and colours items on the pantry list when they are expired or about to expire.</string>
+    <string name="settings_expiry_days">Warn me this early</string>
+    <plurals name="days_option">
+        <item quantity="one">%1$d day before</item>
+        <item quantity="other">%1$d days before</item>
+    </plurals>
+    <string name="settings_section_recipes">Recipe suggestions</string>
+    <string name="settings_almost_there">Show “Almost there” recipes</string>
+    <string name="settings_almost_there_summary">Lists recipes that are one ingredient short in a separate section, below the strict suggestions.</string>
+    <string name="settings_section_data">Pantry data</string>
+    <string name="settings_database_info">Stored on this device in SQLite: %1$d recipes and %2$d pantry items.</string>
+    <string name="settings_load_sample">Load sample pantry</string>
+    <string name="settings_clear_pantry">Clear pantry</string>
+    <plurals name="sample_loaded">
+        <item quantity="one">%1$d sample item added</item>
+        <item quantity="other">%1$d sample items added</item>
+    </plurals>
+    <string name="clear_confirm_title">Clear your pantry?</string>
+    <string name="clear_confirm_message">Every pantry item will be deleted. Recipes are kept.</string>
+    <string name="pantry_cleared">Pantry cleared</string>
 </resources>

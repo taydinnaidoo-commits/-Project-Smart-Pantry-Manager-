@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark palette: the same colours, re-balanced for a dark background. -->
+<resources>
+    <color name="pantry_primary">#98D59E</color>
+    <color name="pantry_on_primary">#003912</color>
+    <color name="pantry_primary_container">#145225</color>
+    <color name="pantry_on_primary_container">#B4F1B9</color>
+    <color name="pantry_secondary">#B9CCB4</color>
+    <color name="pantry_on_secondary">#253423</color>
+    <color name="pantry_secondary_container">#3B4B38</color>
+    <color name="pantry_on_secondary_container">#D5E8CF</color>
+    <color name="pantry_tertiary">#FFB870</color>
+    <color name="pantry_on_tertiary">#4A2800</color>
+    <color name="pantry_tertiary_container">#693C00</color>
+    <color name="pantry_on_tertiary_container">#FFDCBE</color>
+    <color name="pantry_surface">#10140F</color>
+    <color name="pantry_surface_lowest">#0B0F0A</color>
+    <color name="pantry_surface_low">#181D17</color>
+    <color name="pantry_surface_container">#1C211B</color>
+    <color name="pantry_surface_high">#272B25</color>
+    <color name="pantry_surface_highest">#31362F</color>
+    <color name="pantry_on_surface">#E0E4DB</color>
+    <color name="pantry_on_surface_variant">#C2C8BD</color>
+    <color name="pantry_outline">#8C9388</color>
+    <color name="pantry_outline_variant">#424940</color>
+</resources>

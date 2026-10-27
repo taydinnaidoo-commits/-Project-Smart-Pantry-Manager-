@@ -1,9 +1,38 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyAssignment" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!-- One theme for light and dark: the colours swap via values-night/colors.xml. -->
+    <style name="Base.Theme.SmartPantry" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pantry_primary</item>
+        <item name="colorOnPrimary">@color/pantry_on_primary</item>
+        <item name="colorPrimaryContainer">@color/pantry_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/pantry_on_primary_container</item>
+        <item name="colorSecondary">@color/pantry_secondary</item>
+        <item name="colorOnSecondary">@color/pantry_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/pantry_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/pantry_on_secondary_container</item>
+        <item name="colorTertiary">@color/pantry_tertiary</item>
+        <item name="colorOnTertiary">@color/pantry_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/pantry_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/pantry_on_tertiary_container</item>
+        <item name="colorSurface">@color/pantry_surface</item>
+        <item name="colorSurfaceContainerLowest">@color/pantry_surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/pantry_surface_low</item>
+        <item name="colorSurfaceContainer">@color/pantry_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/pantry_surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/pantry_surface_highest</item>
+        <item name="colorOnSurface">@color/pantry_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/pantry_on_surface_variant</item>
+        <item name="colorOutline">@color/pantry_outline</item>
+        <item name="colorOutlineVariant">@color/pantry_outline_variant</item>
+        <item name="android:colorBackground">@color/pantry_surface</item>
     </style>
 
-    <style name="Theme.MyAssignment" parent="Base.Theme.MyAssignment" />
+    <style name="Theme.SmartPantry" parent="Base.Theme.SmartPantry" />
+
+    <!-- Small coloured heading used above each section of a screen. -->
+    <style name="SectionHeader">
+        <item name="android:textAppearance">?attr/textAppearanceTitleSmall</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
 </resources>
