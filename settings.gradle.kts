@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MyAssignment"
+rootProject.name = "SmartPantryManager"
 include(":app")
  

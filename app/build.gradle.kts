@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myassignment"
+    namespace = "za.ac.richfield.smartpantry"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.myassignment"
+        applicationId = "za.ac.richfield.smartpantry"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -32,10 +32,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.activity.ktx)
+    implementation(libs.activity)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
