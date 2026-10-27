@@ -1,69 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  The page, and the tabs at the foot of it.
-
-  The margin rule is drawn here rather than by any one screen, because it runs
-  the whole height of the page regardless of what is written on it, and it has
-  to cross the heading as well as the list. It is declared first so that it is
-  drawn first: it is printed on the paper, so anything solid laid over the paper
-  - the black Add bar, the tab strip - covers it, as ink would.
--->
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Pantry List screen: toolbar, expiry banner, the pantry RecyclerView, an
+     "Add ingredient" button and the bottom navigation. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/paper">
+    android:background="?attr/colorSurface">
 
-    <View
-        android:id="@+id/margin_rule"
-        android:layout_width="@dimen/rule_thin"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/margin_x"
-        android:background="@color/margin_rule"
-        app:layout_constraintBottom_toTopOf="@id/nav_rule"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_pantry" />
 
-    <include
-        android:id="@+id/page_header"
-        layout="@layout/view_page_header"
+    <TextView
+        android:id="@+id/expiry_banner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_banner"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnTertiaryContainer"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_event"
+        app:drawableTint="?attr/colorOnTertiaryContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pantry_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/nav_rule"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/page_header" />
-
-    <View
-        android:id="@+id/nav_rule"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/rule_thin"
-        android:background="@color/rule"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expiry_banner" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        android:text="@string/pantry_empty"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:visibility="gone"
+        app:drawableTopCompat="@drawable/ic_kitchen"
+        app:drawableTint="?attr/colorOutline"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expiry_banner" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/add_ingredient"
+        app:icon="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/paper"
-        app:elevation="0dp"
-        app:itemActiveIndicatorStyle="@style/NavIndicator"
-        app:itemIconTint="@color/nav_icon"
-        app:itemTextAppearanceActive="@style/NavLabel.Active"
-        app:itemTextAppearanceInactive="@style/NavLabel"
-        app:itemTextColor="@color/nav_label"
-        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
