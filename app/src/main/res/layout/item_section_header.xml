@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A section title in the recipe list, e.g. "Ready to cook (3)". -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_text"
+    style="@style/SectionHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:accessibilityHeading="true"
+    android:paddingHorizontal="16dp" />
