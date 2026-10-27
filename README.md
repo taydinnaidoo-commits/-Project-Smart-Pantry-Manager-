@@ -1,1 +1,0 @@
-# -Project-Smart-Pantry-Manager-
